@@ -45,7 +45,7 @@ pipeline {
 
         // [Mandatory if JF_USER and JF_PASSWORD are not provided]
         // JFrog access token with 'read' permissions for Xray
-        JF_ACCESS_TOKEN= credentials(JF_ACCESS_TOKEN)
+        JF_ACCESS_TOKEN= credentials("JF_ACCESS_TOKEN")
 
         // [Optional, default: "."]
         // Relative path to the project in the git repository
