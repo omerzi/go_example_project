@@ -24,8 +24,10 @@ pipeline {
 
         // [Mandatory]
         // Bitbucket accesses token with the following permissions 
-        JF_GIT_TOKEN= credentials("JF_GIT_TOKEN")
+        JF_GIT_TOKEN= credentials('JF_GIT_TOKEN')
         JF_GIT_PROVIDER= "github"
+
+        HELLO= credentials('Hello_Cred')
 
         // [Mandatory]
         // Bitbucket project namespace
@@ -45,7 +47,7 @@ pipeline {
 
         // [Mandatory if JF_USER and JF_PASSWORD are not provided]
         // JFrog access token with 'read' permissions for Xray
-        // JF_ACCESS_TOKEN= credentials("JF_ACCESS_TOKEN")
+        JF_ACCESS_TOKEN= credentials('JF_ACCESS_TOKEN')
 
         // [Optional, default: "."]
         // Relative path to the project in the git repository
@@ -82,6 +84,7 @@ pipeline {
 
         stage ('Scan Pull Requests') {
             steps {
+                sh "echo $HELLO"
                 sh "chmod +x frogbot"
                 sh "./frogbot scan-pull-requests"
 
