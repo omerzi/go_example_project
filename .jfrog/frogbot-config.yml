@@ -1,6 +1,7 @@
 - repoName: go_example_project
   includeAllVulnerabilities: true
 - repoName: npm_example_project
-  - installCommandName: npm
-    installCommandArgs:
-      - i
+  projects:
+    - installCommandName: npm
+      installCommandArgs:
+        - i
