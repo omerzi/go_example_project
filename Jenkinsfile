@@ -27,7 +27,7 @@ pipeline {
         JF_GIT_TOKEN= credentials('JF_GIT_TOKEN')
         JF_GIT_PROVIDER= "github"
 
-        HELLO= credentials('Hello_Cred')
+        HELLO= credentials('Hello_Creds')
 
         // [Mandatory]
         // Bitbucket project namespace
