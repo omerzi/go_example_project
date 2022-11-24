@@ -1,0 +1,2 @@
+- repoName: go_example_project
+  includeAllVulnerabilities: true

@@ -27,8 +27,6 @@ pipeline {
         JF_GIT_TOKEN= credentials('JF_GIT_TOKEN')
         JF_GIT_PROVIDER= "github"
 
-        HELLO= credentials('Hello_Creds')
-
         // [Mandatory]
         // Bitbucket project namespace
         JF_GIT_OWNER= "omerzi"
@@ -84,7 +82,6 @@ pipeline {
 
         stage ('Scan Pull Requests') {
             steps {
-                sh "echo $HELLO"
                 sh "chmod +x frogbot"
                 sh "./frogbot scan-pull-requests"
 
