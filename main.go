@@ -20,6 +20,7 @@ func getApp() components.App {
 }
 
 func getCommands() []components.Command {
+	invalid := "github_pat_23k2k2k2k2k2k2k2k2"
 	return []components.Command{
 		commands.GetHelloCommand()}
 }
